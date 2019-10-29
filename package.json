@@ -1,25 +1,23 @@
 {
-  "name": "karim",
-  "description": "karim",
-  "version": "0.0.0",
-  "main": "bot.js",
+  "name": "test-project",
+  "version": "1.0.0",
+  "description": "A Vue.js project",
+  "main": "src/main.js",
+  "private": true,
   "scripts": {
-    "start": "node bot.js"
+    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "start": "npm run dev",
+    "unit": "jest --config test/unit/jest.conf.js --coverage",
+    "test": "npm run unit",
+    "lint": "eslint --ext .js,.vue src test/unit",
+    "build": "node build/build.js"
   },
   "dependencies": {
-   "discord.js": "^11.3.2",
-    "discord.js-musicbot-addon": "^1.10.3",
-    "dateformat": "3.0.3",
-    "fs": "^0.0.2",
-    "quick.db":"6.3.1",
-    "canvas": "1.6.10",
-    "hh-mm-ss": "1.2.0",
-    "dateformat":"3.0.3",
-    "jimp":"0.2.28",
-    "moment": "^2.22.1",
-    "ms": "^2.1.1",
-    "request": "^2.85.0",
-    "snekfetch": "^3.6.4",
-    "ytdl-core": "^0.20.2",
-  }
+    "vue": "^2.5.2"
+  },
+  "engines": {
+    "node": ">= 6.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": ["> 1%", "last 2 versions", "not ie <= 8"]
 }
